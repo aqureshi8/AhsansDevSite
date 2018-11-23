@@ -1,0 +1,26 @@
+{% extends 'mainSite/base.html' %}
+{% load static %}
+
+{% block content %}
+<form class="CoverLetterForm" method="post" action="{% url 'contactMe' %}">
+    {% csrf_token %}
+    <h2>Contact Me</h2>
+    <div class="FormRow">
+        <div class="FormField Name">
+            <label for="id_name">Name: </label><br />{{ form.name }}
+        </div>
+    </div>
+    <div class="FormRow">
+        <div class="FormField Email">
+            <label for="id_email">Email: </label><br />
+            {{ form.email }}
+        </div><br />
+    </div>
+    <div class="FormRow">
+        <div class="FormField" id="Message">
+            <label for="id_message">Email Message: </label>{{ form.message }}<br />
+        </div>
+    </div>
+    <input class="FormDone" type="submit" value="Send Message" />
+    <input type="hidden" name="next" value="{{ next }}">
+{% endblock %}

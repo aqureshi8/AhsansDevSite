@@ -1,0 +1,462 @@
+html {
+	width: 100%;
+	height: 100%;
+}
+
+body {
+	width: 100%;
+	height: 100%;
+	display: block;
+	top: 0;
+	margin-top: 0;
+	margin-bottom: 0;
+	margin-left: auto;
+	margin-right: auto;
+	background-color: white;
+	font-family: Montserrat;
+	overflow: auto;
+}
+
+body h1 {
+	padding-top: 3vh;
+	padding-bottom: 3vh;
+	margin-top: 0;
+	margin-bottom: 0;
+	font-size: 4em;
+	text-align: center;
+	color: Black;
+}
+
+pre {
+    white-space: pre-wrap;
+    white-space: -moz-pre-wrap;
+    white-space: -pre-wrap;
+    white-space: -o-pre-wrap;
+    word-wrap: break-word;
+}
+
+.NamePlate h1 {
+    height: 50px;
+    padding: 0px;
+    font-size: 45px;
+    float: left;
+}
+
+.Welcome {
+    position: absolute;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+}
+
+.MenuBar {
+    width: 100%;
+    background: Black;
+    text-align: center;
+}
+
+.MenuButton {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    height: 40px;
+    color: White;
+    background-color: Transparent;
+    font-size: larger;
+    border-top: None;
+    border-bottom: None;
+}
+
+.MenuButton:hover {
+    color: LightBlue;
+}
+
+.LeftButtons, .RightButtons {
+	width: 50%;
+	position: absolute;
+	top: 1vh;
+	z-index: 1;
+}
+
+.LeftButtons {
+    left: 3%;
+}
+
+.RightButtons {
+    right: 3%;
+}
+
+.LeftButtons button, .RightButtons button {
+	width: 100%;
+	height: 10vh;
+	font-size: 3vw;
+	padding: 15px;
+	font-family: Montserrat;
+	background-color: Transparent;
+	border-color: Transparent;
+	vertical-align: middle;
+}
+
+.buttonSpace {
+    margin: 0;
+    height: 11vh;
+}
+
+.LeftButtons button:hover, .RightButtons button:hover {
+    background-color: LightGray;
+    color: White;
+}
+
+.LeftButtons button {
+	text-align: left;
+}
+
+.RightButtons button {
+    text-align: right;
+}
+
+.CoinHolder:hover .Coin {
+	transform: rotate3d(1, 0, 0, 180deg);
+}
+
+.CoinHolder {
+    width: 75vh;
+    border-radius: 100%;
+	position: absolute;
+	margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+	z-index: 2;
+}
+
+.Front, .Back {
+	width: 100%;
+	height: 100%;
+	background-color: white;
+}
+
+.Coin {
+	transition: 0.5s;
+	transform-style: preserve-3d;
+	position: relative;
+	width: 100%;
+	padding-top: 100%;
+	border-radius: 50%;
+}
+
+.Front {
+	z-index: 2;
+}
+
+.Back {
+	transform: rotate3d(1, 0, 0, 180deg);
+}
+
+.Back p {
+}
+
+.Front, .Back {
+	border-radius: 50%;
+	backface-visibility: hidden;
+	position: absolute;
+	top: 0;
+	left: 0;
+	border: solid;
+	border-color: black;
+	text-align: center;
+}
+
+#MainImage {
+	display: inline-block;
+	margin: auto;
+	border-radius: 50%;
+	width: 100%;
+	height: 100%;
+}
+
+#border1 {
+    position: absolute;
+    height: 100%;
+    width: 5%;
+    left: 0px;
+    background: url('./images/codeBorder1.png');
+}
+
+#border2 {
+    position: absolute;
+    height: 100%;
+    width: 5%;
+    right: 0px;
+    top: 0px;
+    background: url('./images/codeBorder2.png');
+}
+
+.SocialMediaIcon {
+    height: 50px;
+    width: 50px;
+}
+
+.NamePlate {
+    padding: 10px;
+    overflow: auto;
+}
+
+.SocialMediaLink {
+    text-decoration: None;
+}
+
+.SocialMediaDiv {
+    position: relative;
+    float: right;
+    height: 50px;
+}
+
+.currentPage {
+    color: LightBlue;
+}
+
+.ListItem {
+    border-style: solid;
+    border-width: thin;
+    border-color: Black;
+    margin: 1vw;
+    overflow: auto;
+    display: block;
+}
+
+.ListItemPicture {
+    display: inline-block;
+    padding: 1vw;
+}
+
+.ListItemPicture img {
+    width: 20vw;
+}
+
+.ListItemDetails {
+    display: inline-block;
+    padding: 1vw;
+    width: 72vw;
+}
+
+.ListItemDetails h1 {
+    display: inline-block;
+    font-size: 3vw;
+    padding: 0px;
+}
+
+.ListItemDetails h2 {
+    display: inline-block;
+    font-size: 2vw;
+    margin: 0px;
+    padding: 1vh;
+    float: right;
+}
+
+.ListItemDetails h3 {
+    font-size: 1.5vw;
+    margin: 0px;
+    font-style: italic;
+}
+
+.Right {
+    float: right;
+    right: 0;
+}
+
+#ProjectListRight {
+    margin-right: 1%;
+    margin-left: 0.5%;
+}
+
+#ProjectListBackgroundRight {
+    margin-right: 1%;
+    margin-left: 0.5%;
+}
+
+.Left {
+    float: left;
+    left: 0;
+}
+
+#ProjectListLeft {
+    margin-left: 1%;
+    margin-right: 0.5%;
+}
+
+#ProjectListBackgroundLeft {
+    margin-left: 1%;
+    margin-right: 0.5%;
+}
+
+.ProjectTable {
+    width: 100%;
+}
+
+.ProjectsList {
+    width: 48.5%;
+}
+
+.Project {
+    position: relative;
+    border-style: solid;
+    border-color: Black;
+    border-width: thin;
+    border-radius: 5%;
+    text-align: center;
+    margin-top: 2%;
+    margin-bottom: 2%;
+}
+
+.ProjectImg {
+    margin: 2%;
+    border-style: solid;
+    border-width: thin;
+    width: 25%;
+    background-color: White;
+}
+
+.Project h4 {
+    font-style: italic;
+    font-weight: normal;
+}
+
+.Project p {
+    font-size: 1em;
+    margin: 2%;
+    text-align: justify;
+}
+
+.ProjectBackground {
+    border-style: solid;
+    border-color: LightGray;
+    border-width: thin;
+    border-radius: 5%;
+    text-align: center;
+    opacity: 0.05;
+    z-index: -1;
+    margin-top: 2%;
+    margin-bottom: 2%;
+}
+
+.ProjectBackground h4 {
+    font-style: italic;
+    font-weight: normal;
+}
+
+.ProjectBackground p {
+    font-size: 1em;
+    margin: 2%;
+}
+
+.ProjectsBackgroundList {
+    z-index: -1;
+    position: absolute;
+    width: 48.5%;
+}
+
+.ProjectsList a {
+    text-decoration: none;
+    color: black;
+}
+
+.PaperBackground {
+    position: absolute;
+    background-color: gray;
+    overflow: auto;
+    height: 100%;
+    width: 100%;
+}
+
+.Paper {
+    background-color: white;
+    border: solid;
+    position: absolute;
+    padding: 1in;
+    left: 0;
+    right: 0;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    margin-left: auto;
+    margin-right: auto;
+    width: 8.5in;
+    height: 11in;
+}
+
+.CoverLetterForm {
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+}
+
+.CoverLetterForm, .FieldInput {
+    font-size: 12pt;
+}
+
+.FormDone {
+    position: absolute;
+    font-size: 12pt;
+    right: 24%;
+}
+
+.FormField {
+    display: inline-block;
+    margin: 2%;
+    width: 22%;
+}
+
+.FieldInput {
+    width: 100%;
+}
+
+.StreetAddress {
+    width: 75%;
+}
+
+.TextInput:focus {
+    outline: none;
+}
+
+.ProjectStatus {
+    position: absolute;
+    right: 0;
+    padding: 1%;
+    color: black;
+}
+
+.Completed {
+    background-color: green;
+}
+
+.Development {
+    background-color: yellow;
+}
+
+.Beginning {
+    background-color: red;
+}
+
+#Resume {
+    background-color: white;
+    border: solid;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    margin-left: auto;
+    margin-right: auto;
+    width: 8.5in;
+    height: 11in;
+}
+
+#Message {
+    width: 66%;
+}

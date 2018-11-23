@@ -1,0 +1,32 @@
+{% extends 'mainSite/base.html' %}
+{% load static %}
+
+{% block content %}
+{% for employment in employmentList %}
+<div class="ListItem">
+    <div class="ListItemPicture Left">
+        <img class="Left" src="{% static employment.picture_path %}" />
+    </div>
+    <div class="ListItemDetails">
+        <h1>{{ employment.name }}</h1>
+        <h2>{{ employment.start_date|date:"M Y" }} -
+            {% if employment.end_date %}
+                {{ employment.end_date|date:"M Y" }}
+            {% else %}
+                Present
+            {% endif %}
+            </h2>
+        {% for pos in employment.position_set.all %}
+            <h3>{{ pos.title }} ({{ pos.start_date|date:"M Y" }} -
+                {% if pos.end_date %}{{ pos.end_date|date:"M Y" }}{% else %}Present{% endif %})</h3>
+            <ul>
+                {% for accomp in pos.accomplishment_set.all %}
+                <li>{{ accomp.description }}</li>
+                <br />
+                {% endfor %}
+            </ul>
+        {% endfor %}
+    </div>
+</div>
+{% endfor %}
+{% endblock %}

@@ -1,0 +1,73 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'/>
+	<link rel="stylesheet" type="text/css" href="{% static 'mainSite/style.css' %}"/>
+	<title>{% block title %}A Resume - Ahsan{% endblock %}</title>
+</head>
+<body>
+	<header>
+		{% block header %}
+		<div class="NamePlate">
+            <a href="/"><h1>Ahsan Qureshi</h1></a>
+			<div class="SocialMediaDiv">
+				<!-- Image links for Social Media -->
+            	<a class="SocialMediaLink" href="https://github.com/aqureshi8">
+					<img class="SocialMediaIcon" src='{% static "mainSite/images/githubLogo.png" %}' alt='Github Logo'/>
+				</a>
+            	<a class="SocialMediaLink" href="https://www.linkedin.com/in/ahsan-qureshi-b4382080">
+					<img class="SocialMediaIcon" src='{% static "mainSite/images/linkedinLogo.png" %}' alt='LinkedIn Logo'/>
+				</a>
+				<a class="SocialMediaLink" href="https://facebook.com">
+					<img class="SocialMediaIcon" src='{% static "mainSite/images/facebookLogo.png" %}' alt='Facebook Logo'/>
+				</a>
+				<a class="SocialMediaLink" href="https://twitter.com">
+					<img class="SocialMediaIcon" src='{% static "mainSite/images/twitterLogo.png" %}' alt='Twitter Logo'/>
+				</a>
+				<a class="SocialMediaLink" href="https://www.instagram.com/this.is.ahsan/">
+					<img class="SocialMediaIcon" src='{% static "mainSite/images/instagramLogo.png" %}' alt='Instagram Logo'/>
+				</a>
+			</div>
+		</div>
+		<div class="MenuBar">
+            <div class="Menu">
+                <a href="/Projects">
+                    <button class="MenuButton {% if pageName == 'Projects' %}currentPage{% endif %}"
+                            {% if pageName == 'Projects' %}disabled{% endif %}>Projects</button>
+                </a>
+                <a href="/Employment">
+                    <button class="MenuButton {% if pageName == 'Employment' %}currentPage{% endif %}"
+                            {% if pageName == 'Employment' %}disabled{% endif %}>Employment</button>
+                </a>
+                <a href="/Education">
+                    <button class="MenuButton {% if pageName == 'Education' %}currentPage{% endif %}"
+                            {% if pageName == 'Education' %}disabled{% endif %}>Education</button>
+                </a>
+                <a href="/Resume">
+                    <button class="MenuButton {% if pageName == 'Resume' %}currentPage{% endif %}"
+                            {% if pageName == 'Resume' %}disabled{% endif %}>Resume</button>
+                </a>
+                <a href="/CoverLetter">
+                    <button class="MenuButton {% if pageName == 'Cover Letter' %}currentPage{% endif %}"
+                            {% if pageName == 'Cover Letter' %}disabled{% endif %}>Cover Letter</button>
+                </a>
+                <a href="/AboutMe">
+                    <button class="MenuButton {% if pageName == 'About Me' %}currentPage{% endif %}"
+                            {% if pageName == 'About Me' %}disabled{% endif %}>About Me</button>
+                </a>
+                <a href="/ContactMe">
+                    <button class="MenuButton {% if pageName == 'Contact Me' %}currentPage{% endif %}"
+                            {% if pageName == 'Contact Me' %}disabled{% endif %}>Contact Me</button>
+                </a>
+            </div>
+		</div>
+		{% endblock %}
+	</header>
+	{% block content %}
+	{% endblock %}
+	<footer>
+		{% block footer %}
+		{% endblock %}
+	</footer>
+</body>

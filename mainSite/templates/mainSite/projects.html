@@ -1,0 +1,59 @@
+{% extends 'mainSite/base.html' %}
+{% load static %}
+
+{% block content %}
+    <div class="Left ProjectsList" id="ProjectListLeft">
+        {% for proj in projectList %}
+        {% if not proj.id|divisibleby:2 %}
+        <a href="{{ proj.git_url }}">
+            <div class="Project">
+                <h3 class="ProjectStatus {{ proj.status }}">{{ proj.status }}</h3>
+                <img class="ProjectImg" src="{% static proj.picture_path %}" />
+                <h3>{{ proj.name }}</h3>
+                <h4>{{ proj.tech_used }}</h4>
+                <p>{{ proj.description }}</p>
+            </div>
+        </a>
+        {% endif %}
+        {% endfor %}
+    </div>
+    <div class="Left ProjectsBackgroundList" id="ProjectListBackgroundLeft">
+        {% for proj in projectList %}
+        {% if not proj.id|divisibleby:2 %}
+        <div class="ProjectBackground" style="background-image: url({% static proj.picture_path %})">
+            <img class="ProjectImg" src="{% static proj.picture_path %}" />
+            <h3>{{ proj.name }}</h3>
+            <h4>{{ proj.tech_used }}</h4>
+            <p>{{ proj.description }}</p>
+        </div>
+        {% endif %}
+        {% endfor %}
+    </div>
+    <div class="Right ProjectsList" id="ProjectListRight">
+        {% for proj in projectList %}
+        {% if proj.id|divisibleby:2 %}
+        <a href="{{ proj.git_url }}">
+            <div class="Project">
+                <h3 class="ProjectStatus {{ proj.status }}">{{ proj.status }}</h3>
+                <img class="ProjectImg" src="{% static proj.picture_path %}" />
+                <h3>{{ proj.name }}</h3>
+                <h4>{{ proj.tech_used }}</h4>
+                <p>{{ proj.description }}</p>
+            </div>
+        </a>
+        {% endif %}
+        {% endfor %}
+    </div>
+    <div class="Right ProjectsBackgroundList" id="ProjectListBackgroundRight">
+        {% for proj in projectList %}
+        {% if proj.id|divisibleby:2 %}
+        <div class="ProjectBackground" style="background-image: url({% static proj.picture_path %})">
+            <img class="ProjectImg" src="{% static proj.picture_path %}" />
+            <h3>{{ proj.name }}</h3>
+            <h4>{{ proj.tech_used }}</h4>
+            <p>{{ proj.description }}</p>
+        </div>
+        {% endif %}
+        {% endfor %}
+    </div>
+{% endblock %}

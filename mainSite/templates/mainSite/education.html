@@ -1,0 +1,32 @@
+{% extends 'mainSite/base.html' %}
+{% load static %}
+
+{% block content %}
+{% for education in educationList %}
+<div class="ListItem">
+    <div class="ListItemPicture Left">
+        <img class="Left" src="{% static education.picture_path %}" />
+    </div>
+    <div class="ListItemDetails">
+        <h1>{{ education.name }}</h1>
+        <h2>{{ education.start_date|date:"M Y" }} -
+            {% if education.end_date %}
+                {{ education.end_date|date:"M Y" }}
+            {% else %}
+                Present
+            {% endif %}
+            </h2>
+        {% for pos in education.position_set.all %}
+            <h3>{{ pos.title }} ({{ pos.start_date|date:"M Y" }} -
+                {% if pos.end_date %}{{ pos.end_date|date:"M Y" }}{% else %}Present{% endif %})</h3>
+            <ul>
+                {% for accomp in pos.accomplishment_set.all %}
+                <li>{{ accomp.description }}</li>
+                <br />
+                {% endfor %}
+            </ul>
+        {% endfor %}
+    </div>
+</div>
+{% endfor %}
+{% endblock %}

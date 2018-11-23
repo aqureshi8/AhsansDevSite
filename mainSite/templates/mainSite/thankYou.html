@@ -1,0 +1,19 @@
+{% extends 'mainSite/base.html' %}
+{% load static %}
+
+{% block content %}
+<br />
+<div class="ThankYou">
+    <h3>Thank you for yor email!</h3>
+    <br />
+    <p>
+        Your email has been sent to Ahsan and he will respond to it as soon as he can.<br />
+        We appreciate you taking the time to browse the site and reaching out to us!<br />
+    </p>
+</div>
+<div class="EmailReview">
+    {{ name }}<br />
+    {{ email }}<br />
+    {{ message }}<br />
+</div>
+{% endblock %}

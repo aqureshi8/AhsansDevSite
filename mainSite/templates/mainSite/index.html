@@ -1,0 +1,60 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+	<title>A Resume - Ahsan</title>
+	<link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+	<link rel="stylesheet" type="text/css" href="{% static 'mainSite/style.css' %}" />
+</head>
+<body>
+	<div id="border1"></div>
+	<h1>Meet Ahsan Qureshi</h1>
+	<div class="Welcome">
+		<div class="CoinHolder">
+			<div class="Coin">
+				<div class="Front">
+					<img id="MainImage" src='{% static "mainSite/images/meetAhsanQureshi.jpg" %}' alt='Ahsan at Navy Pier in Chicago'/>
+				</div>
+				<div class="Back">
+					<p>DESCRIPTION HERE</p>
+				</div>
+			</div>
+		</div>
+		<div class="LeftButtons">
+            <a href="/Projects">
+			    <button>Projects</button>
+            </a>
+			<div class="buttonSpace"></div>
+            <a href="/Education">
+			    <button>Education</button>
+            </a>
+			<div class="buttonSpace"></div>
+            <a href="/CoverLetter">
+			    <button>Cover Letter</button>
+            </a>
+			<div class="buttonSpace"></div>
+            <a href="/AboutMe">
+			    <button>About Me</button>
+            </a>
+		</div>
+		<div class="RightButtons">
+            <a href="/Employment">
+			    <button>Employment</button>
+            </a>
+			<div class="buttonSpace"></div>
+            <a href="/Resume">
+			    <button>Resume</button>
+            </a>
+			<div class="buttonSpace"></div>
+            <a href="/SocialMedia">
+			    <button>Social Media</button>
+            </a>
+			<div class="buttonSpace"></div>
+            <a href="/ContactMe">
+			    <button>Contact Me</button>
+            </a>
+		</div>
+	</div>
+    <div id="border2"></div>
+</body>
+</html>

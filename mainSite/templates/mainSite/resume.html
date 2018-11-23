@@ -1,0 +1,9 @@
+{% extends 'mainSite/base.html' %}
+{% load static %}
+
+{% block content %}
+<div class="PaperBackground">
+    <a href="{{latest_resume}}" class="ResumeDownload"><button>Download</button></a>
+    <img id='Resume' alt="Ahsan's Resume" src='{% static "mainSite/images/resume.jpg" %}' />
+</div>
+{% endblock %}
