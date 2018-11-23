@@ -1,1 +1,1 @@
-web: gunicorn AhsansDevSite/wsgi.py --log-file -
+web: gunicorn AhsansDevSite.wsgi --log-file -
