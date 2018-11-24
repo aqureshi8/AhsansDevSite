@@ -439,8 +439,23 @@ pre {
     background-color: yellow;
 }
 
-.Beginning {
+.Planning {
     background-color: red;
+}
+
+.ThankYou {
+    text-align: center;
+}
+
+.EmailReview {
+    test-align: justify;
+    padding-left: 15%;
+    padding-right: 15%;
+}
+
+.EmailReviewMessage {
+    padding-left: 5%;
+    padding-right: 5%;
 }
 
 #Resume {

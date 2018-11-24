@@ -140,10 +140,10 @@ class ContactMeView(FormView):
     def post(self, request, *args, **kwargs):
         form = self.form_class(request.POST)
         if form.is_valid():
-            #send_mail(form.cleaned_data['name'] + ' - ' + form.cleaned_data['email'] + ' - The Resume',
-            #          form.cleaned_data['message'],
-            #          'contactAhsanQureshi@gmail.com',
-            #          ['ahsan.qureshi8@gmail.com'])
+            send_mail(form.cleaned_data['name'] + ' - ' + form.cleaned_data['email'] + ' - The Resume',
+                      form.cleaned_data['message'],
+                      'contactAhsanQureshi@gmail.com',
+                      ['ahsan.qureshi8@gmail.com'])
             return render(request, 'mainSite/thankYou.html', {'pageName': 'Contact Me',
                                                               'name': form.cleaned_data['name'],
                                                               'email': form.cleaned_data['email'],
