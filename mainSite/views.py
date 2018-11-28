@@ -19,6 +19,8 @@ from models import Occupation, Project, CoverLetterParagraph, Media
 class IndexView(TemplateView):
     template_name = 'mainSite/index.html'
 
+class SocialMediaView(TemplateView):
+    template_name = 'mainSite/socialMedia.html'
 
 class ProjectsView(ListView):
     model = Project

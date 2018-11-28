@@ -13,6 +13,7 @@ urlpatterns = [
     url(r'^CoverLetter/', views.CoverLetterView.as_view(), name='coverLetter'),
     url(r'^AboutMe/', views.AboutMeView.as_view(), name='aboutMe'),
     url(r'^ContactMe/', views.ContactMeView.as_view(), name='contactMe'),
+    url(r'SocialMedia/', views.SocialMediaView.as_view(), name='socialMedia'),
 ]
 
 if settings.DEBUG:
