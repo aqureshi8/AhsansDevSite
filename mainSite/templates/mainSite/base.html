@@ -2,8 +2,11 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
     <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'/>
 	<link rel="stylesheet" type="text/css" href="{% static 'mainSite/style.css' %}"/>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="{% static 'mainSite/js/ahsanDevSite.js' %}"></script>
 	<title>{% block title %}A Resume - Ahsan{% endblock %}</title>
 </head>
 <body>
@@ -64,6 +67,37 @@
                             {% if pageName == 'Contact Me' %}disabled{% endif %}>Contact Me</button>
                 </a>
             </div>
+			<div class="MenuDropdown">
+                <img class="MenuLogo" src='{% static "mainSite/images/menu.png" %}' alt="Menu" onclick="toggleMenu()"/>
+                <a href="/Projects">
+                    <button class="MenuButton hideButton {% if pageName == 'Projects' %}currentPage{% endif %}"
+                            {% if pageName == 'Projects' %}disabled{% endif %}>Projects</button>
+                </a>
+                <a href="/Employment">
+                    <button class="MenuButton hideButton {% if pageName == 'Employment' %}currentPage{% endif %}"
+                            {% if pageName == 'Employment' %}disabled{% endif %}>Employment</button>
+                </a>
+                <a href="/Education">
+                    <button class="MenuButton hideButton {% if pageName == 'Education' %}currentPage{% endif %}"
+                            {% if pageName == 'Education' %}disabled{% endif %}>Education</button>
+                </a>
+                <a href="/Resume">
+                    <button class="MenuButton hideButton {% if pageName == 'Resume' %}currentPage{% endif %}"
+                            {% if pageName == 'Resume' %}disabled{% endif %}>Resume</button>
+                </a>
+                <a href="/CoverLetter">
+                    <button class="MenuButton hideButton {% if pageName == 'Cover Letter' %}currentPage{% endif %}"
+                            {% if pageName == 'Cover Letter' %}disabled{% endif %}>Cover Letter</button>
+                </a>
+                <a href="/AboutMe">
+                    <button class="MenuButton hideButton {% if pageName == 'About Me' %}currentPage{% endif %}"
+                            {% if pageName == 'About Me' %}disabled{% endif %}>About Me</button>
+                </a>
+                <a href="/ContactMe">
+                    <button class="MenuButton hideButton {% if pageName == 'Contact Me' %}currentPage{% endif %}"
+                            {% if pageName == 'Contact Me' %}disabled{% endif %}>Contact Me</button>
+                </a>
+			</div>
 		</div>
 		{% endblock %}
 	</header>

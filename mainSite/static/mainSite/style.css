@@ -459,6 +459,41 @@ pre {
     padding-right: 5%;
 }
 
+.MenuDropdown {
+    display: none;
+}
+
+@media (max-width: 960px) {
+    .Menu {
+        display: none;
+    }
+    .MenuDropdown {
+        display: inline-block;
+        width: 100%;
+    }
+    .MenuButton {
+        width: 100%;
+    }
+    .MenuLogo {
+        padding-top: 10px;
+        height: 40px;
+        padding-bottom: 10px;
+    }
+    .NamePlate h1 {
+        width: 100%;
+        padding-bottom: 2%;
+    }
+    .SocialMediaDiv {
+        text-align: center;
+        position: relative;
+        width: 100%;
+    }
+
+    .hideButton {
+        display: none;
+    }
+}
+
 #Resume {
     background-color: white;
     border: solid;
