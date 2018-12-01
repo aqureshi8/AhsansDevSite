@@ -463,6 +463,24 @@ pre {
     display: none;
 }
 
+#Resume {
+    background-color: white;
+    border: solid;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    margin-left: auto;
+    margin-right: auto;
+    width: 8.5in;
+    height: 11in;
+}
+
+#Message {
+    width: 66%;
+}
+
 @media (max-width: 960px) {
     .Menu {
         display: none;
@@ -492,22 +510,59 @@ pre {
     .hideButton {
         display: none;
     }
-}
 
-#Resume {
-    background-color: white;
-    border: solid;
-    position: absolute;
-    left: 0;
-    right: 0;
-    margin-top: 2%;
-    margin-bottom: 2%;
-    margin-left: auto;
-    margin-right: auto;
-    width: 8.5in;
-    height: 11in;
-}
+    body h1 {
+        font-size: 1em;
+    }
 
-#Message {
-    width: 66%;
+    .CoinHolder {
+        width: 99%;
+        border-radius: 0%;
+    }
+
+    .Front {
+        border-radius: 0%;
+        border: none;
+    }
+
+    .Back {
+        border-radius: 0%;
+        font-size: 1em;
+        border: none;
+        border-top: solid;
+        border-bottom: solid;
+        text-align: justify;
+    }
+
+    #MainImage {
+        border-radius: 0%;
+    }
+
+    .Back p, .Back h2 {
+        margin: 5%;
+    }
+
+    .Back h2 {
+        font-size: 1em;
+        margin-top: 0%;
+        margin-bottom: 0%;
+    }
+
+    .Back p {
+        font-size: 0.7em;
+    }
+
+    .RightButtons, .LeftButtons {
+        position: fixed;
+        top: unset;
+        bottom: 0px;
+    }
+
+    .RightButtons button, .LeftButtons button {
+        text-align: center;
+    }
+
+    .buttonSpace {
+        height: 0px;
+    }
 }
