@@ -539,7 +539,7 @@ pre {
     }
 
     .Back p, .Back h2 {
-        margin: 5%;
+        margin: 3%;
     }
 
     .Back h2 {
@@ -564,5 +564,50 @@ pre {
 
     .buttonSpace {
         height: 0px;
+    }
+
+    .LeftButtons button:hover, .RightButtons button:hover {
+        background-color: unset;
+        color: black;
+    }
+
+    .ProjectsList {
+        width: 98%;
+    }
+
+    .ListItemDetails {
+        width: 98%;
+    }
+
+    .ListItemDetails h1, .ListItemDetails h2 {
+        font-size: 0.8em;
+        padding: 0%;
+    }
+
+    .ListItemDetails ul {
+        font-size: .5em;
+    }
+
+    .ListItemDetails h3 {
+        font-size: 0.5em;
+    }
+
+    .ListItemPicture {
+        text-align: center;
+    }
+
+    .ListItemPicture img {
+        width: 50%;
+        float: unset;
+        left: auto;
+    }
+
+    .PaperBackground {
+        height: 80%;
+    }
+
+    #Resume {
+        width: 98%;
+        height: auto;
     }
 }
