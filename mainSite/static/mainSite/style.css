@@ -485,26 +485,40 @@ pre {
     .Menu {
         display: none;
     }
+
     .MenuDropdown {
         display: inline-block;
         width: 100%;
     }
+
     .MenuButton {
         width: 100%;
     }
+
     .MenuLogo {
         padding-top: 10px;
-        height: 40px;
+        height: 30px;
         padding-bottom: 10px;
     }
+
     .NamePlate h1 {
         width: 100%;
+        position: static;
+        font-size: 2em;
+        height: auto;
         padding-bottom: 2%;
     }
+
     .SocialMediaDiv {
         text-align: center;
-        position: relative;
+        position: static;
         width: 100%;
+        height: auto;
+    }
+
+    .SocialMediaIcon {
+        height: 35px;
+        width: 35px;
     }
 
     .hideButton {
@@ -512,12 +526,14 @@ pre {
     }
 
     body h1 {
+        position: static;
         font-size: 1em;
     }
 
     .CoinHolder {
-        width: 99%;
+        width: 100%;
         border-radius: 0%;
+        position: static;
     }
 
     .Front {
@@ -531,6 +547,7 @@ pre {
         border: none;
         border-top: solid;
         border-bottom: solid;
+        border-width: thin;
         text-align: justify;
     }
 
@@ -556,6 +573,17 @@ pre {
         position: fixed;
         top: unset;
         bottom: 0px;
+        width: 49%;
+        position: static;
+        display: inline-block;
+    }
+
+    .RightButtons {
+        right: 5%;
+    }
+
+    .LeftButtons {
+        left: 5%;
     }
 
     .RightButtons button, .LeftButtons button {
@@ -569,10 +597,6 @@ pre {
     .LeftButtons button:hover, .RightButtons button:hover {
         background-color: unset;
         color: black;
-    }
-
-    .ProjectsList {
-        width: 98%;
     }
 
     .ListItemDetails {
@@ -594,20 +618,67 @@ pre {
 
     .ListItemPicture {
         text-align: center;
+        width: 100%;
     }
 
     .ListItemPicture img {
-        width: 50%;
+        width: 40%;
         float: unset;
         left: auto;
     }
 
     .PaperBackground {
-        height: 80%;
+        height: auto;
+    }
+
+    .ProjectsList {
+        width: 98%;
+    }
+
+    .ProjectsBackgroundList {
+        display: none;
     }
 
     #Resume {
         width: 98%;
         height: auto;
+        position: static;
+        margin: 0%;
+    }
+
+    .ResumeDownload button {
+        width: auto;
+        margin: 2%;
+        padding: 1%;
+        position: absolute;
+        right: 0%;
+        border: solid;
+        border-width: thin;
+    }
+
+    .CoverLetterForm h2 {
+        font-size: 1em;
+    }
+
+    .FormDone {
+        margin: 5%;
+        border: solid;
+        border-width: thin;
+        right: 0px;
+    }
+
+    .FormField {
+        width: 100%;
+        border-bottom: solid;
+        border-width: thin;
+    }
+
+    .Paper {
+        position: relative;
+        width: 96%;
+        height: auto;
+        padding: 2%;
+        border: none;
+        margin: 0%;
     }
 }
