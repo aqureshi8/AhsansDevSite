@@ -601,6 +601,7 @@ pre {
 
     .ListItemDetails {
         width: 98%;
+        padding: 1%;
     }
 
     .ListItemDetails h1, .ListItemDetails h2 {
@@ -618,7 +619,7 @@ pre {
 
     .ListItemPicture {
         text-align: center;
-        width: 100%;
+        width: 98%;
     }
 
     .ListItemPicture img {
@@ -669,8 +670,6 @@ pre {
 
     .FormField {
         width: 100%;
-        border-bottom: solid;
-        border-width: thin;
     }
 
     .Paper {
