@@ -16,68 +16,42 @@ import forms
 from models import Occupation, Project, CoverLetterParagraph, Media
 
 
-class IndexView(TemplateView):
-    template_name = 'mainSite/index.html'
-
-class SocialMediaView(TemplateView):
-    template_name = 'mainSite/socialMedia.html'
-
-class ProjectsView(ListView):
-    model = Project
-    template_name = 'mainSite/projects.html'
-    context_object_name = 'projectList'
+class AboutMeView(TemplateView):
+    template_name = 'mainSite/base.html'
 
     def get_context_data(self, **kwargs):
         """Sets page context"""
-        context = super(ProjectsView, self).get_context_data()
-        context['pageName'] = 'Projects'
+        context = super(AboutMeView, self).get_context_data()
+        context['pageName'] = 'About Me'
         return context
 
-    def get_queryset(self):
-        """Returns all Projects"""
-        return Project.objects.all()
 
-class EmploymentView(ListView):
-    model = Occupation
-    template_name = 'mainSite/employment.html'
-    context_object_name = 'employmentList'
+class ContactMeView(FormView):
+    template_name = 'mainSite/contact.html'
+    form_class = forms.ContactForm
 
-    def get_context_data(self, **kwargs):
-        """Sets page context"""
-        context = super(EmploymentView, self).get_context_data()
-        context['pageName'] = 'Employment'
-        return context
+    def get(self, request, *args, **kwargs):
+        form = self.form_class(initial=self.initial)
+        return render(request, self.template_name, {'form': form, 'pageName': 'Contact Me'})
 
-    def get_queryset(self):
-        """Returns all occupations with type 'Employment"""
-        return Occupation.objects.filter(type="Employment")
-
-class EducationView(ListView):
-    model = Occupation
-    template_name = 'mainSite/education.html'
-    context_object_name = 'educationList'
-
-    def get_context_data(self, **kwargs):
-        """Sets page context"""
-        context = super(EducationView, self).get_context_data()
-        context['pageName'] = 'Education'
-        return context
-
-    def get_queryset(self):
-        """Returns all occupations with type 'Education'"""
-        return Occupation.objects.filter(type='Education')
-
-
-class ResumeView(TemplateView):
-    template_name = 'mainSite/resume.html'
+    def post(self, request, *args, **kwargs):
+        form = self.form_class(request.POST)
+        if form.is_valid():
+            send_mail(form.cleaned_data['name'] + ' - ' + form.cleaned_data['email'] + ' - The Resume',
+                      form.cleaned_data['message'],
+                      'contactAhsanQureshi@gmail.com',
+                      ['ahsan.qureshi8@gmail.com'])
+            return render(request, 'mainSite/thankYou.html', {'pageName': 'Contact Me',
+                                                              'name': form.cleaned_data['name'],
+                                                              'email': form.cleaned_data['email'],
+                                                              'message': form.cleaned_data['message'],
+                                                              })
+        return render(request, self.template_name, {'form': form, 'pageName': 'Contact Me'})
 
     def get_context_data(self, **kwargs):
         """Sets page context"""
-        context = super(ResumeView, self).get_context_data()
-        context['pageName'] = 'Resume'
-
-        latest_resume = Media.objects.order_by('-upload_date')[0]
-        context['latest_resume'] = latest_resume.file.url
+        context = super(ContactMeView, self).get_context_data()
+        context['pageName'] = 'Contact Me'
         return context
 
 
@@ -121,40 +95,71 @@ class CoverLetterView(FormView):
         return render(request, self.template_name, {'form': form, 'pageName': 'Cover Letter'})
 
 
-class AboutMeView(TemplateView):
-    template_name = 'mainSite/base.html'
+class EducationView(ListView):
+    model = Occupation
+    template_name = 'mainSite/education.html'
+    context_object_name = 'educationList'
 
     def get_context_data(self, **kwargs):
         """Sets page context"""
-        context = super(AboutMeView, self).get_context_data()
-        context['pageName'] = 'About Me'
+        context = super(EducationView, self).get_context_data()
+        context['pageName'] = 'Education'
         return context
 
+    def get_queryset(self):
+        """Returns all occupations with type 'Education'"""
+        return Occupation.objects.filter(type='Education')
 
-class ContactMeView(FormView):
-    template_name = 'mainSite/contact.html'
-    form_class = forms.ContactForm
 
-    def get(self, request, *args, **kwargs):
-        form = self.form_class(initial=self.initial)
-        return render(request, self.template_name, {'form': form, 'pageName': 'Contact Me'})
-
-    def post(self, request, *args, **kwargs):
-        form = self.form_class(request.POST)
-        if form.is_valid():
-            send_mail(form.cleaned_data['name'] + ' - ' + form.cleaned_data['email'] + ' - The Resume',
-                      form.cleaned_data['message'],
-                      'contactAhsanQureshi@gmail.com',
-                      ['ahsan.qureshi8@gmail.com'])
-            return render(request, 'mainSite/thankYou.html', {'pageName': 'Contact Me',
-                                                              'name': form.cleaned_data['name'],
-                                                              'email': form.cleaned_data['email'],
-                                                              'message': form.cleaned_data['message'],
-                                                              })
-        return render(request, self.template_name, {'form': form, 'pageName': 'Contact Me'})
+class EmploymentView(ListView):
+    model = Occupation
+    template_name = 'mainSite/employment.html'
+    context_object_name = 'employmentList'
 
     def get_context_data(self, **kwargs):
         """Sets page context"""
-        context = super(ContactMeView, self).get_context_data()
-        context['pageName'] = 'Contact Me'
+        context = super(EmploymentView, self).get_context_data()
+        context['pageName'] = 'Employment'
         return context
+
+    def get_queryset(self):
+        """Returns all occupations with type 'Employment"""
+        return Occupation.objects.filter(type="Employment")
+
+
+class IndexView(TemplateView):
+    template_name = 'mainSite/index.html'
+
+
+class ProjectsView(ListView):
+    model = Project
+    template_name = 'mainSite/projects.html'
+    context_object_name = 'projectList'
+
+    def get_context_data(self, **kwargs):
+        """Sets page context"""
+        context = super(ProjectsView, self).get_context_data()
+        context['pageName'] = 'Projects'
+        return context
+
+    def get_queryset(self):
+        """Returns all Projects"""
+        return Project.objects.all()
+
+
+class ResumeView(TemplateView):
+    template_name = 'mainSite/resume.html'
+
+    def get_context_data(self, **kwargs):
+        """Sets page context"""
+        context = super(ResumeView, self).get_context_data()
+        context['pageName'] = 'Resume'
+
+        latest_resume = Media.objects.order_by('-upload_date')[0]
+        context['latest_resume'] = latest_resume.file.url
+        return context
+
+
+class SocialMediaView(TemplateView):
+    template_name = 'mainSite/socialMedia.html'
+
