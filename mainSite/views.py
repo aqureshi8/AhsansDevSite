@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 from __future__ import unicode_literals
 
+from django.conf import settings
 from django.shortcuts import render
 from django.http import HttpRequest
 from django.urls import reverse
@@ -156,7 +157,8 @@ class ResumeView(TemplateView):
         context['pageName'] = 'Resume'
 
         latest_resume = Media.objects.order_by('-upload_date')[0]
-        context['latest_resume'] = latest_resume.file.url
+        url_file_name = latest_resume.file.url.split('/')[-1]
+        context['latest_resume'] = '/static/' + url_file_name
         return context
 
 
