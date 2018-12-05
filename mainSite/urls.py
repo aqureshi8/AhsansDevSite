@@ -24,6 +24,7 @@ urlpatterns = [
     url(r'^SocialMedia/', views.SocialMediaView.as_view(), name='socialMedia'),
     url(r'^favicon\.ico$', RedirectView.as_view(url='/static/mainSite/images/favicon.ico'), name='favicon'),
     url(r'^sitemap\.xml/$', sitemap, {'sitemaps': sitemaps}, name='sitemap'),
+    url(r'^\.well-known/acme-challenge/xa_hra-kBBKBjkyPgxi6DOFueY9aOCy2rxpFrZQDPDc$', views.ChallengeView.as_view(), name='challenge'),
 ]
 
 if settings.DEBUG:

@@ -17,6 +17,10 @@ import forms
 from models import Occupation, Project, CoverLetterParagraph, Media
 
 
+class ChallengeView(TemplateView):
+    template_name = 'mainSite/challenge.html'
+
+
 class AboutMeView(TemplateView):
     template_name = 'mainSite/base.html'
 
