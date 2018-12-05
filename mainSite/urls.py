@@ -3,6 +3,7 @@ from django.conf.urls import url
 from . import views
 from django.conf import settings
 from django.conf.urls.static import static
+from django.views.generic.base import RedirectView
 
 urlpatterns = [
     url(r'^$', views.IndexView.as_view(), name='index'),
@@ -13,7 +14,8 @@ urlpatterns = [
     url(r'^CoverLetter/', views.CoverLetterView.as_view(), name='coverLetter'),
     url(r'^AboutMe/', views.AboutMeView.as_view(), name='aboutMe'),
     url(r'^ContactMe/', views.ContactMeView.as_view(), name='contactMe'),
-    url(r'SocialMedia/', views.SocialMediaView.as_view(), name='socialMedia'),
+    url(r'^SocialMedia/', views.SocialMediaView.as_view(), name='socialMedia'),
+    url(r'^favicon\.ico$', RedirectView.as_view(url='/static/mainSite/images/favicon.ico'), name='favicon')
 ]
 
 if settings.DEBUG:
