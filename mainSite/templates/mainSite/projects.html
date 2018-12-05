@@ -2,6 +2,7 @@
 {% load static %}
 
 {% block content %}
+<div class="Projects">
     <div class="Left ProjectsList" id="ProjectListLeft">
         {% for proj in projectList %}
         {% if not proj.id|divisibleby:2 %}
@@ -56,4 +57,5 @@
         {% endif %}
         {% endfor %}
     </div>
+</div>
 {% endblock %}

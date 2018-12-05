@@ -35,6 +35,16 @@ pre {
     word-wrap: break-word;
 }
 
+footer {
+    background-color: black;
+    width: 100%;
+    padding-left: 15%;
+    padding-right: 15%;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    color: white;
+}
+
 .NamePlate h1 {
     height: 50px;
     padding: 0px;
@@ -223,6 +233,16 @@ pre {
     height: 50px;
 }
 
+.ResumeDownload {
+    position: absolute;
+    margin-top: 3%;
+    margin-left: 1%;
+}
+
+.ResumeDownload button {
+    padding: 10%;
+}
+
 .currentPage {
     color: LightBlue;
 }
@@ -274,6 +294,10 @@ pre {
 .Right {
     float: right;
     right: 0;
+}
+
+.Projects {
+    overflow: auto;
 }
 
 #ProjectListRight {
@@ -373,17 +397,17 @@ pre {
 }
 
 .PaperBackground {
-    position: absolute;
     background-color: gray;
-    overflow: auto;
-    height: 100%;
+    overflow: visible;
+    height: auto;
     width: 100%;
+    text-align: center;
 }
 
 .Paper {
+    position: absolute;
     background-color: white;
     border: solid;
-    position: absolute;
     padding: 1in;
     left: 0;
     right: 0;
@@ -396,14 +420,13 @@ pre {
 }
 
 .CoverLetterForm {
-    position: absolute;
     left: 0;
     right: 0;
-    margin-top: 2%;
-    margin-bottom: 2%;
     margin-left: auto;
     margin-right: auto;
     width: 80%;
+    padding-top: 2%;
+    padding-bottom: 4%;
 }
 
 .CoverLetterForm, .FieldInput {
@@ -474,14 +497,10 @@ pre {
 
 #Resume {
     background-color: white;
+    display: inline-block;
     border: solid;
-    position: absolute;
-    left: 0;
-    right: 0;
     margin-top: 2%;
     margin-bottom: 2%;
-    margin-left: auto;
-    margin-right: auto;
     width: 8.5in;
     height: 11in;
 }
