@@ -147,3 +147,10 @@ STATICFILES_DIRS = (
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 SITE_ID = 1
+
+SECURE_SSL_REDIRECT = config('SSL_REDIRECT', default=True, cast=bool)
+
+SESSION_COOKIE_SECURE = config('SSL_COOKIE', default=True, cast=bool)
+
+CSRF_COOKIE_SECURE = config('CSRF_COOKIE', default=True, cast=bool)
+
