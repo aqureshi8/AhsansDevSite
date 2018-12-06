@@ -37,7 +37,7 @@ pre {
 
 footer {
     background-color: black;
-    width: 100%;
+    width: 70%;
     padding-left: 15%;
     padding-right: 15%;
     padding-top: 2%;
@@ -402,21 +402,25 @@ footer {
     height: auto;
     width: 100%;
     text-align: center;
+    padding-top: 2%;
+    padding-bottom: 2%;
 }
 
 .Paper {
-    position: absolute;
+    text-align: left;
     background-color: white;
     border: solid;
     padding: 1in;
     left: 0;
     right: 0;
-    margin-top: 2%;
-    margin-bottom: 2%;
     margin-left: auto;
     margin-right: auto;
     width: 8.5in;
     height: 11in;
+}
+
+.Content {
+    min-height: 100%;
 }
 
 .CoverLetterForm {
@@ -495,6 +499,21 @@ footer {
     display: none;
 }
 
+.AboutMe {
+    height: auto;
+    width: 57.5%;
+    display: inline-block;
+    padding-right: 5%;
+    padding-top: 5%;
+    padding-bottom: 5%;
+}
+
+.AboutMe h1 {
+    padding: 0%;
+    font-size: 2em;
+    font-style: italic;
+}
+
 #Resume {
     background-color: white;
     display: inline-block;
@@ -507,6 +526,17 @@ footer {
 
 #Message {
     width: 66%;
+}
+
+#AboutMeImage {
+    width: 30%;
+    height: auto;
+    display: inline-block;
+    float: left;
+    padding-left: 5%;
+    padding-right: 2.5%;
+    padding-top: 5%;
+    padding-bottom: 5%;
 }
 
 @media (max-width: 960px) {
@@ -707,5 +737,15 @@ footer {
         padding: 2%;
         border: none;
         margin: 0%;
+    }
+
+    .AboutMe {
+        width: 90%;
+        padding: 5%;
+    }
+
+    #AboutMeImage {
+        width: 90%;
+        padding: 5%;
     }
 }

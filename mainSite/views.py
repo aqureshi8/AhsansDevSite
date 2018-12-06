@@ -22,7 +22,7 @@ class ChallengeView(TemplateView):
 
 
 class AboutMeView(TemplateView):
-    template_name = 'mainSite/base.html'
+    template_name = 'mainSite/aboutMe.html'
 
     def get_context_data(self, **kwargs):
         """Sets page context"""
