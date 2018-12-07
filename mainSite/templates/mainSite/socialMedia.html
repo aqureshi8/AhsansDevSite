@@ -2,45 +2,62 @@
 {% load static %}
 
 {% block content %}
-<div class="SocialMediaList">
-    <div class="SocialMediaBlock">
-        <a href="https://github.com/aqureshi8">
+<div class="SocialMediaBlock">
+    <a href="https://github.com/aqureshi8" class="SocialMediaLink">
+        <div class="SocialMediaImage">
             <img src="{% static 'mainSite/images/githubLogo.png' %}" alt="GitHub Logo" />
+        </div>
+        <div class="SocialMediaHandle">
             <h1>@aqureshi8</h1>
-        </a>
-    </div>
-    <div class="SocialMediaBlock">
-        <a href="https://www.linkedin.com/in/ahsan-qureshi-b4382080">
-            <img src="{% static 'mainSite/images/linkedinLogo.png' %}" alt="LinkedIn Logo" />
-            <h1>@Ahsan Qureshi</h1>
-        </a>
-    </div>
-    <div class="SocialMediaBlock">
-        <a href="https://facebook.com/">
-            <img src="{% static 'mainSite/images/facebookLogo.png' %}" alt="Facebook Logo" />
-            <h1>Not Available</h1>
-        </a>
-    </div>
-    <div class="SocialMediaBlock">
-        <a href="https://twitter.com/">
-            <img src="{% static 'mainSite/images/twitterLogo.png' %}" alt="Twitter Logo" />
-            <h1>Not Available</h1>
-        </a>
-    </div>
-    <div class="SocialMediaBlock">
-        <a href="https://www.instagram.com/this.is.ahsan/">
-            <img src="{% static 'mainSite/images/instagramLogo.png' %}" alt="Instagram Logo" />
-            <h1>@this.is.ahsan</h1>
-        </a>
-    </div>
+        </div>
+    </a>
 </div>
-<div class="SocialMediaDetails">
-    <p>
+<div class="SocialMediaBlock">
+    <a href="https://www.linkedin.com/in/ahsan-qureshi-b4382080" class="SocialMediaLink">
+        <div class="SocialMediaImage">
+            <img src="{% static 'mainSite/images/linkedinLogo.png' %}" alt="LinkedIn Logo" />
+        </div>
+        <div class="SocialMediaHandle">
+            <h1>@Ahsan Qureshi</h1>
+        </div>
+    </a>
+</div>
+<div class="SocialMediaBlock">
+    <a href="https://facebook.com/" class="SocialMediaLink">
+        <div class="SocialMediaImage">
+            <img src="{% static 'mainSite/images/facebookLogo.png' %}" alt="Facebook Logo" />
+        </div>
+        <div class="SocialMediaHandle">
+            <h1>Not Available</h1>
+        </div>
+    </a>
+</div>
+<div class="SocialMediaBlock">
+    <a href="https://twitter.com/" class="SocialMediaLink">
+        <div class="SocialMediaImage">
+            <img src="{% static 'mainSite/images/twitterLogo.png' %}" alt="Twitter Logo" />
+        </div>
+        <div class="SocialMediaHandle">
+            <h1>Not Available</h1>
+        </div>
+    </a>
+</div>
+<div class="SocialMediaBlock">
+    <a href="https://www.instagram.com/this.is.ahsan/" class="SocialMediaLink">
+        <div class="SocialMediaImage">
+            <img src="{% static 'mainSite/images/instagramLogo.png' %}" alt="Instagram Logo" />
+        </div>
+        <div class="SocialMediaHandle">
+            <h1>@this.is.ahsan</h1>
+        </div>
+    </a>
+</div>
+<p class="SocialMediaParagraph">
         Social media has changed the meaning of being social entirely and although it has its benefits, I recognize that
         there are also many downfalls. I recently removed my accounts from Facebook, Instagram, and Twitter to focus on
         learning and improving myself without distractions. I plan to use these tools to further build my career through
         networking and work related posts. So far, I have only recreated an account with Instagram so feel free to
         follow me on there to see what I am up to!
-    </p>
-</div>
+</p>
+
 {% endblock %}

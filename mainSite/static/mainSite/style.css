@@ -514,38 +514,6 @@ footer {
     font-style: italic;
 }
 
-.SocialMediaBlock {
-    width: 90%;
-    padding: 2.5% 5% 2.5% 5%;
-    display: inline-block;
-}
-
-.SocialMediaBlock a img {
-    width: 8%;
-}
-
-.SocialMediaBlock a h1 {
-    font-size: 2em;
-    display: inline-block;
-    padding: 0%;
-}
-
-.SocialMediaList {
-    width: 50%;
-    float: left;
-}
-
-.SocialMediaDetails {
-    width: 40%;
-    float: right;
-    padding: 2.5% 5% 2.5% 5%;
-}
-
-.SocialMediaDetails p {
-    text-align: justify;
-    margin: 0px;
-}
-
 #Resume {
     background-color: white;
     display: inline-block;
@@ -554,6 +522,42 @@ footer {
     margin-bottom: 2%;
     width: 8.5in;
     height: 11in;
+}
+
+.SocialMediaBlock {
+    display: inline-block;
+    padding: 2%;
+    width: 45%;
+}
+
+.SocialMediaImage, .SocialMediaHandle {
+    display: inline-block;
+}
+
+.SocialMediaImage {
+    width: 8vh;
+}
+
+.SocialMediaImage img {
+    width: 100%
+}
+
+.SocialMediaHandle {
+    padding-bottom: 2vh;
+}
+
+.SocialMediaHandle h1 {
+    padding: 0px;
+    font-size: 5vh;
+}
+
+.SocialMediaParagraph {
+    width: 46%;
+    font-size: 1em;
+    display: inline-block;
+    float: right;
+    padding: 2%;
+    text-align: justify;
 }
 
 #Message {
@@ -773,6 +777,17 @@ footer {
 
     .AboutMe {
         width: 90%;
+        padding: 5%;
+    }
+
+    .SocialMediaBlock {
+        width: 90%;
+        padding: 5%;
+    }
+
+    .SocialMediaParagraph {
+        width: 90%;
+        float: unset;
         padding: 5%;
     }
 
