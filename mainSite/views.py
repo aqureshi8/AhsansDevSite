@@ -44,7 +44,7 @@ class ContactMeView(FormView):
         if form.is_valid():
             send_mail(form.cleaned_data['name'] + ' - ' + form.cleaned_data['email'] + ' - The Resume',
                       form.cleaned_data['message'],
-                      'contactAhsanQureshi@gmail.com',
+                      'noreply@thisisahsan.com',
                       ['ahsan.qureshi8@gmail.com'])
             return render(request, 'mainSite/thankYou.html', {'pageName': 'Contact Me',
                                                               'name': form.cleaned_data['name'],
