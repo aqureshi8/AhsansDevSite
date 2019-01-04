@@ -801,4 +801,9 @@ footer {
         width: 90%;
         padding: 5%;
     }
+
+    .LeftButtons :first-child button {
+        position: relative;
+        width: 200%;
+    }
 }
