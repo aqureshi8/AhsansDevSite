@@ -1,4 +1,4 @@
-Django==1.11.16
+Django==1.11.29
 dj-database-url==0.5.0
 gunicorn==19.9.0
 pip==18.1
