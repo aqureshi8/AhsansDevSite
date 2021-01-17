@@ -129,7 +129,7 @@ class EmploymentView(ListView):
 
     def get_queryset(self):
         """Returns all occupations with type 'Employment"""
-        return Occupation.objects.filter(type="Employment")
+        return Occupation.objects.filter(type="Employment").order_by('-start_date')
 
 
 class IndexView(TemplateView):
