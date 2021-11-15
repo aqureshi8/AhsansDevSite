@@ -1,7 +1,7 @@
 Django==1.11.16
 dj-database-url==0.5.0
 gunicorn==19.9.0
-pip==18.1
+pip==21.1
 psycopg2==2.7.6.1
 python-decouple==3.1
 pytz==2018.7
